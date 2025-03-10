@@ -42,7 +42,38 @@ const elementStaff = document.querySelector('.staff');
 // Chiamo la funzione generateHTML, passando due argomenti
 generateHTML(elementStaff, teamMembers)
 
-function generateHTML(member, elements){
+function generateHTML(member, elements) {
   console.log(member)
-  console.log(elements)
+
+  let items = '';
+  for (let i = 0; i < elements.length; i++) {
+    const currentElements = elements[i];
+    console.log(currentElements)
+
+    items = items + creaHTML(currentElements)
+  }
+
+  elementStaff.innerHTML = items;
+}
+
+
+function creaHTML(object) {
+  console.log(object)
+  return `
+                <div class="col-4">
+                    <div class="mb-3" style="max-width: 540px;">
+                        <div class="row g-0 bg-color">
+                            <div class="col-4">
+                                <img src="${object.image}" class="img-fluid rounded-start" alt="${object.name}">
+                            </div>
+                            <div class="col-8 ps-2 pt-1">
+                                <div class="card-body">
+                                    <h5 class="card-title text-light">${object.name}</h5>
+                                    <p class="card-text text-light">${object.role}</p>
+                                    <a href="#">${object.email}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
 }
