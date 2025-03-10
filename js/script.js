@@ -36,3 +36,13 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+// Seleziono l'elemento HTML con la classe "staff" e lo assegna alla variabile "elementStaff"
+const elementStaff = document.querySelector('.staff');
+
+// Chiamo la funzione generateHTML, passando due argomenti
+generateHTML(elementStaff, teamMembers)
+
+function generateHTML(member, elements){
+  console.log(member)
+  console.log(elements)
+}
