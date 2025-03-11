@@ -51,33 +51,45 @@
                 </div>
             </div>
 
-        <!-- HTML per l'inserimento dei dati -->
-        <div class="container">
-                <div class="row mb-5 d-flex flex-column align-items-center">
-                    <div class="col-4 mt-5"><h3>Add Team Member</h3></div>
-                    <div class="col-4">
-                        <label for="dati" class="form-label d-flex justify-content-center"></label>
-                        <input required id="dati" type="text" class="form-control  -danger"
-                            placeholder="Inserisci nome e cognome" aria-label="First name">
+            <!-- HTML per l'inserimento dei dati -->
+            <div class="container">
+                <form id="insertForm">
+                    <div class="container">
+                        <div class="row mb-5 d-flex flex-column align-items-center">
+                            <div class="col-4 mt-5 text-center">
+                                <h3>Add Team Member</h3>
+                            </div>
+                            <div class="col-4">
+                                <label for="nome" class="form-label d-flex justify-content-center"></label>
+                                <input required id="nome" type="text" class="form-control  -danger"
+                                    placeholder="Inserisci nome e cognome" aria-label="First name">
+                            </div>
+
+                            <div class="col-4">
+                                <label for="role" class="form-label d-flex justify-content-center"></label>
+                                <input required id="role" type="text" class="form-control " placeholder="Ruolo"
+                                    aria-label="Last name">
+                            </div>
+
+                            <div class="col-4">
+                                <label for="email" class="form-label d-flex justify-content-center"></label>
+                                <input required id="email" type="text" class="form-control "
+                                    placeholder="Email" aria-label="First name">
+                            </div>
+                            <div class="col-4">
+                                <label for="url-Img" class="form-label d-flex justify-content-center"></label>
+                                <input required id="url-Img" type="text" class="form-control "
+                                    placeholder="URL dell'immagine" aria-label="First name">
+                            </div>
+                            <div id="bottoni" class="col-4">
+                                <button type="submit" class="btn w-50 bg-light border-secondary  mt-2">Aggiungi
+                                    membro</button>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="col-4">
-                        <label for="km" class="form-label d-flex justify-content-center"></label>
-                        <input required id="km" type="text" class="form-control " placeholder="Ruolo"
-                            aria-label="Last name">
-                    </div>
-                    
-                    <div class="col-4">
-                        <label for="dati" class="form-label d-flex justify-content-center"></label>
-                        <input required id="dati" type="text" class="form-control "
-                            placeholder="URL dell'immagine" aria-label="First name">
-                    </div>
-                    <div id="bottoni" class="col-4">
-                        <button type="submit" class="btn w-50 bg-light border-secondary  mt-2">Aggiungi membro</button>
-                    </div>
-                </div>
-        </div>
-             
+                </form>
+            </div>
+
     </main>
 
 

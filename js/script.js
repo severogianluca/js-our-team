@@ -47,6 +47,12 @@ const teamMembers = [
 //3) Inserisce l'HTML generato dentro l'elemento .staff
 const elementStaff = document.querySelector('.staff');
 
+const elementInsertForm = document.getElementById('insertForm')
+const nomeElement = document.getElementById('nome');
+const roleElement = document.getElementById('role');
+const emailElement = document.getElementById('email');
+const urlImgElement = document.getElementById('url-Img');
+
 
 function generateHTML(addMemberToHtml, elements) {
   console.log(addMemberToHtml)
@@ -84,3 +90,31 @@ function creaHTML(object) {
                     </div>
                 </div>`
 }
+
+elementInsertForm.addEventListener('submit', addNewMember)
+
+// funzione per aggiungere un nuovo membro
+function addNewMember(event){
+  event.preventDefault();
+
+  const nome = nomeElement.value;
+  const role = roleElement.value;
+  const email = emailElement.value;
+  const urlImg = urlImgElement.value;
+
+  console.log(nome)
+  console.log(role)
+  console.log(email)
+  console.log(urlImg)
+
+}
+
+const newMember = {
+  nome,
+  role,
+  email,
+  urlImg
+}
+
+teamMembers.push(newMember);
+console.log(teamMembers)
