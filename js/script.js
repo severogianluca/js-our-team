@@ -48,7 +48,7 @@ const teamMembers = [
 const elementStaff = document.querySelector('.staff');
 
 const elementInsertForm = document.getElementById('insertForm')
-const nomeElement = document.getElementById('nome');
+const nameElement = document.getElementById('name');
 const roleElement = document.getElementById('role');
 const emailElement = document.getElementById('email');
 const urlImgElement = document.getElementById('url-Img');
@@ -94,27 +94,35 @@ function creaHTML(object) {
 elementInsertForm.addEventListener('submit', addNewMember)
 
 // funzione per aggiungere un nuovo membro
-function addNewMember(event){
+function addNewMember(event) {
   event.preventDefault();
 
-  const nome = nomeElement.value;
+  const name = nameElement.value;
   const role = roleElement.value;
   const email = emailElement.value;
-  const urlImg = urlImgElement.value;
+  const img = urlImgElement.value;
 
-  console.log(nome)
+  console.log(name)
   console.log(role)
   console.log(email)
-  console.log(urlImg)
+  console.log(img)
+
+  const newMember = {
+    name,
+    role,
+    email,
+    img
+  }
+
+  teamMembers.push(newMember);
+  console.log(teamMembers)
+
+  generateHTML(elementStaff, teamMembers)
 
 }
 
-const newMember = {
-  nome,
-  role,
-  email,
-  urlImg
-}
 
-teamMembers.push(newMember);
-console.log(teamMembers)
+
+
+
+
