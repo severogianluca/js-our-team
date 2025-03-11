@@ -48,7 +48,7 @@ function generateHTML(member, elements) {
   let items = '';
   for (let i = 0; i < elements.length; i++) {
     const currentElements = elements[i];
-    console.log(currentElements)
+   
 
     items = items + creaHTML(currentElements)
   }
@@ -59,12 +59,12 @@ function generateHTML(member, elements) {
 
 function creaHTML(object) {
   console.log(object)
-  return `
+  return `    
                 <div class="col-4">
                     <div class="mb-3" style="max-width: 540px;">
                         <div class="row g-0 bg-color">
                             <div class="col-4">
-                                <img src="${object.image}" class="img-fluid rounded-start" alt="${object.name}">
+                                <img src="${object.img}" class="img-fluid rounded-start" alt="${object.name}">
                             </div>
                             <div class="col-8 ps-2 pt-1">
                                 <div class="card-body">
