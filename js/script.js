@@ -36,26 +36,33 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
-// Seleziono l'elemento HTML con la classe "staff" e lo assegna alla variabile "elementStaff"
+//1) Seleziono l'elemento HTML con la classe "staff" e lo assegna alla variabile "elementStaff"
+
+//2) stringa vuota items che conterrà l'HTML di tutti i membri del team
+// uso un ciclo for per scorrere l'array elements
+// elements[i] prende un membro del team alla volta
+// creaHTML(currentElements) genera l'HTML per quel membro
+// L'HTML generato viene aggiunto alla stringa items
+
+//3) Inserisce l'HTML generato dentro l'elemento .staff
 const elementStaff = document.querySelector('.staff');
 
-// Chiamo la funzione generateHTML, passando due argomenti
-generateHTML(elementStaff, teamMembers)
 
-function generateHTML(member, elements) {
-  console.log(member)
-
+function generateHTML(addMemberToHtml, elements) {
+  console.log(addMemberToHtml)
   let items = '';
+
   for (let i = 0; i < elements.length; i++) {
     const currentElements = elements[i];
-   
 
-    items = items + creaHTML(currentElements)
+    items += creaHTML(currentElements)
   }
-
   elementStaff.innerHTML = items;
 }
 
+
+// Chiamo la funzione generateHTML, passando due argomenti
+generateHTML(elementStaff, teamMembers)
 
 function creaHTML(object) {
   console.log(object)
